@@ -4,7 +4,7 @@ HOMEPAGE="http://pyxml.sourceforge.net/topics/index.html"
 COPYRIGHT="2000 Fourthought Inc, USA"
 LICENSE="PyXML"
 REVISION="2"
-#SOURCE_URI="http://sourceforge.net/projects/pyxml/files/latest/download?source=files"
+SOURCE_URI="https://github.com/actmd/PyXML/archive/0.8.4.tar.gz"
 #CHECKSUM_MD5="1f7655050cebbb664db976405fdba209"
 
 ARCHITECTURES="x86_gcc2 c86 c86_64"
