@@ -1,10 +1,28 @@
-DESCRIPTION="powerful replacement for inetd"
+SUMMARY="Powerful replacement for inetd"
+DESCRIPTION="xinetd is a powerful and secure replacement for inetd \
+that also offers many more features."
 HOMEPAGE="http://www.xinetd.org/"
+COPYRIGHT="1992 by Panagiotis Tsirigotis \
+	1998-2001 by Rob Braun"
+LICENSE="Xinetd"
+REVISION="2"
 SOURCE_URI="http://www.xinetd.org/xinetd-2.3.14.tar.gz"
-REVISION="1"
-STATUS_HAIKU="stable"
-DEPEND=""
-CHECKSUM_MD5="567382d7972613090215c6c54f9b82d9"
+#CHECKSUM_MD5="567382d7972613090215c6c54f9b82d9"
+
+ARCHITECTURES="?x86_gcc2 ?x86_64"
+
+PROVIDES="
+	"
+REQUIRES="
+	haiku
+	"
+
+BUILD_PREREQUIRES="
+	"
+BUILD_REQUIRES="
+	haiku_devel
+	"
+
 BUILD()
 {
 	cd xinetd-2.3.14
@@ -40,6 +58,3 @@ INSTALL()
 	make install DESTDIR=${DESTDIR}
 }
 
-LICENSE="Xinetd"
-COPYRIGHT="1992 by Panagiotis Tsirigotis
-	1998-2001 by Rob Braun"

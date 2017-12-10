@@ -1,10 +1,26 @@
-DESCRIPTION="SQL database server."
+SUMMARY="SQL database server"
+DESCRIPTION="MySQL database server"
 HOMEPAGE="http://www.mysql.com"
-SOURCE_URI="http://mirror.provenscaling.com/mysql/community/source/5.0/mysql-5.0.83.tar.gz"
-CHECKSUM_MD5="051392064a1e32cca5c23a593908b10e"
+COPYRIGHT="2000, 2012, Oracle and/or its affiliates. All rights reserved."
+LICENSE="GNU GPL v2"
 REVISION="1"
-STATUS_HAIKU="untested"
-DEPEND="sys-libs/readline >= 5.2"
+SOURCE_URI="http://mirror.provenscaling.com/mysql/community/source/5.0/mysql-5.0.83.tar.gz"
+#CHECKSUM_MD5="051392064a1e32cca5c23a593908b10e"
+
+ARCHITECTURES="?x86_gcc2 ?x86_64"
+
+PROVIDES="
+	"
+REQUIRES="
+	haiku
+	"
+
+BUILD_PREREQUIRES="
+	readline >= 5.2
+	"
+BUILD_REQUIRES="
+	haiku_devel
+	"
 
 BUILD()
 {
@@ -21,5 +37,3 @@ INSTALL()
 	cd mysql-5.0.83
 	make install
 }
-LICENSE="GNU GPL v2"
-COPYRIGHT="2000, 2012, Oracle and/or its affiliates. All rights reserved."

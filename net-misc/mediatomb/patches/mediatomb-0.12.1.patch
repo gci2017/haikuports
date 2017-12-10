@@ -17,7 +17,7 @@ diff -urN mediatomb-0.12.1/configure.ac mediatomb-0.12.1-haiku/configure.ac
 +        HAIKU_OS=1
 +        SEARCH_DIR="/boot/common"
 +        LIBS="$LIBS -lnetwork"
-+        ;;   
++        ;;
  esac
  
  MT_SET_SEARCHPATH

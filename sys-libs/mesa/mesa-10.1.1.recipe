@@ -110,7 +110,7 @@ REQUIRES_devel="
 # ===== Mesa OpenGL Add-ons ==================================================
 # ----- swrast package -------------------------------------------------------
 
-SUMMARY_swrast="Mesa software rasterization renderer"
+SUMMARY_swrast="The Mesa software rasterization renderer"
 DESCRIPTION_swrast="This 3D BGLRenderer add-on provides Mesa software
 	rasterization on Haiku systems. Software rasterization performs all
 	3D rendering on the systems CPU and doesn't require any specialized
