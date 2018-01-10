@@ -1,0 +1,43 @@
+SUMMARY="The native IDE for Haiku"
+DESCRIPTION="Heidi is an IDE designed for use on Haiku."
+HOMEPAGE="https://github.com/waddlesplash/Heidi"
+COPYRIGHT="2014 Augustin Cavalier"
+LICENSE="MIT"
+REVISION="1"
+SOURCE_URI="https://github.com/waddlesplash/Heidi/archive/ec676d2b45043b7a70d606f5fe2dbf05f3c45ed1.tar.gz"
+#CHECKSUM_SHA256=""
+#SOURCE_DIR="Heidi-ec676d2b45043b7a70d606f5fe2dbf05f3c45ed1"
+
+ARCHITECTURES="x86_gcc2 x86 x86_64"
+
+PROVIDES="
+	heidi = $portVersion
+	app:heidi = $portVersion
+	"
+REQUIRES="
+	haiku
+	"
+
+BUILD_REQUIRES="
+	haiku_devel
+	"
+BUILD_PREREQUIRES="
+	makefile_engine
+  scintilla
+	cmd:make
+	cmd:cmake
+	cmd:gcc
+	cmd:ld
+	"
+
+BUILD()
+{
+	make
+}
+
+INSTALL()
+{
+	mkdir -p $appsDir/Heidi
+  # objects copy
+	addAppDeskbarSymlink $appsDir/Heidi/Heidi
+}
